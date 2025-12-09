@@ -1,103 +1,113 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { FaStar } from "react-icons/fa";
+import "swiper/css";
+
 const Testimonials = () => {
+  const feedbacks = [
+    {
+      img: "https://i.pravatar.cc/150?img=32",
+      name: "Rohit Kumar, 42",
+      rating: 5,
+      message:
+        "The doctors were extremely caring and the treatment was very effective. One of the best hospital experiences I've had.",
+    },
+    {
+      img: "https://i.pravatar.cc/150?img=47",
+      name: "Priya Sharma, 29",
+      rating: 5,
+      message:
+        "Great service! Quick response and excellent emergency care. Highly recommended for quality medical support.",
+    },
+    {
+      img: "https://i.pravatar.cc/150?img=12",
+      name: "Amit Verma, 36",
+      rating: 4,
+      message:
+        "The staff was friendly and supportive. Doctors explained everything clearly. Overall wonderful experience.",
+    },
+    {
+      img: "https://i.pravatar.cc/150?img=55",
+      name: "Sanjay Saini, 50",
+      rating: 5,
+      message:
+        "Emergency care was quick and professional. Hospital staff handled everything smoothly.",
+    },
+    {
+      img: "https://i.pravatar.cc/150?img=60",
+      name: "Neha Joshi, 32",
+      rating: 5,
+      message:
+        "Best doctors! They treated my health issue with full care and guidance. Highly satisfied.",
+    },
+    {
+      img: "https://i.pravatar.cc/150?img=22",
+      name: "Deepak Kumar, 40",
+      rating: 4,
+      message:
+        "Very clean hospital, great facilities and expert doctors. Highly recommended.",
+    },
+    {
+      img: "https://i.pravatar.cc/150?img=13",
+      name: "Komal Verma, 25",
+      rating: 5,
+      message:
+        "The treatment was excellent, and staff was very polite. Thank you for wonderful support.",
+    },
+  ];
+
   return (
-    <div className="mt-20 bg-[rgba(62,161,255,0.04)] px-6 sm:px-10 lg:px-16 py-10">
-      <h3 className="text-center text-[30px] sm:text-[34px] lg:text-[38px] font-bold mb-14">
-        What people say
-      </h3>
+    <section className="w-full bg-gray-50 py-16 px-6">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-900 mb-12">
+        What Our Patients Say
+      </h2>
 
-      <div
-        className="
-          flex flex-col md:flex-row 
-          justify-center md:justify-evenly 
-          gap-10 md:gap-0
-        "
-      >
-        {/* Card 1 */}
-        <div
-          className="
-            flex flex-col justify-center items-center
-            bg-white w-[300px] sm:w-[330px] lg:w-[350px] 
-            h-[390px] sm:h-[410px] lg:h-[426px]
-            rounded-[10px] shadow-[0px_0px_2px_rgba(0,0,0,0.1)]
-            gap-5 mx-auto
-          "
+      <div className="max-w-6xl mx-auto">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          loop={true}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-10"
         >
-          <div>
-            <img
-              src="https://i.pravatar.cc/300"
-              alt="avatar"
-              className="w-[100px] sm:w-[110px] lg:w-[121px] rounded-full cursor-pointer"
-            />
-          </div>
+          {feedbacks.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white shadow-md hover:shadow-lg transition rounded-xl p-6 flex flex-col items-center text-center h-[380px]">
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="w-24 h-24 rounded-full border-4 border-blue-100 shadow object-cover"
+                />
 
-          <div className="flex flex-col text-center gap-3">
-            <h6 className="text-[16px] sm:text-[17px] lg:text-[18px] font-semibold">
-              Andrea Andy, 35
-            </h6>
-            <p className="text-[13px] sm:text-[14px] text-[#5C5C5C] px-4">
-              "I had a great experience at this clinic. The doctors were
-              knowledgeable and caring."
-            </p>
-          </div>
-        </div>
+                <h3 className="mt-4 text-lg font-semibold text-gray-800">
+                  {item.name}
+                </h3>
 
-        {/* Card 2 */}
-        <div
-          className="
-            flex flex-col justify-center items-center
-            bg-white w-[300px] sm:w-[330px] lg:w-[350px] 
-            h-[390px] sm:h-[410px] lg:h-[426px]
-            rounded-[10px] shadow-[0px_0px_2px_rgba(0,0,0,0.1)]
-            gap-5 mx-auto
-          "
-        >
-          <div>
-            <img
-              src="https://i.pravatar.cc/500"
-              alt="avatar"
-              className="w-[100px] sm:w-[110px] lg:w-[121px] rounded-full cursor-pointer"
-            />
-          </div>
+                {/* Stars */}
+                <div className="flex justify-center mt-2">
+                  {Array.from({ length: item.rating }).map((_, i) => (
+                    <FaStar key={i} className="text-yellow-400 text-xl" />
+                  ))}
+                  {Array.from({ length: 5 - item.rating }).map((_, i) => (
+                    <FaStar key={i} className="text-gray-300 text-xl" />
+                  ))}
+                </div>
 
-          <div className="flex flex-col text-center gap-3">
-            <h6 className="text-[16px] sm:text-[17px] lg:text-[18px] font-semibold">
-              Ricky Reynold, 27
-            </h6>
-            <p className="text-[13px] sm:text-[14px] text-[#5C5C5C] px-4">
-              "The clinic provided a comfortable and welcoming atmosphere."
-            </p>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div
-          className="
-            flex flex-col justify-center items-center
-            bg-white w-[300px] sm:w-[330px] lg:w-[350px] 
-            h-[390px] sm:h-[410px] lg:h-[426px]
-            rounded-[10px] shadow-[0px_0px_2px_rgba(0,0,0,0.1)]
-            gap-5 mx-auto
-          "
-        >
-          <div>
-            <img
-              src="https://i.pravatar.cc/400"
-              alt="avatar"
-              className="w-[100px] sm:w-[110px] lg:w-[121px] rounded-full cursor-pointer"
-            />
-          </div>
-
-          <div className="flex flex-col text-center gap-3">
-            <h6 className="text-[16px] sm:text-[17px] lg:text-[18px] font-semibold">
-              Grelish David, 30
-            </h6>
-            <p className="text-[13px] sm:text-[14px] text-[#5C5C5C] px-4">
-              "The treatments I received at this clinic were effective."
-            </p>
-          </div>
-        </div>
+                <p className="text-gray-600 text-sm mt-4 leading-relaxed px-2">
+                  "{item.message}"
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

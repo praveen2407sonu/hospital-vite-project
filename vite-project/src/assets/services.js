@@ -1,5 +1,5 @@
 import vaccine from "../assets/images/vaccine.jpg";
-import selfcare from "../assets/images/self-care.jpg";
+// import selfcare from "../assets/images/self-care.jpg";
 import laboratory from "../assets/images/lab.png";
 import treatment from "../assets/images/treatment.jpg";
 import pethealth from "../assets/images/pet.avif";
@@ -17,11 +17,11 @@ const services = [
     name: "General Clinic",
     body: "Expert doctors available for routine checkups & treatment.",
   },
-  {
-    image: selfcare,
-    name: "Self Care Guidance",
-    body: "Personalized health plans to maintain your well-being.",
-  },
+  // {
+  //   image: selfcare,
+  //   name: "Self Care Guidance",
+  //   body: "Personalized health plans to maintain your well-being.",
+  // },
   {
     image: laboratory,
     name: "Laboratory Tests",
