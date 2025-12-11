@@ -5,7 +5,7 @@ const Contact = () => {
     <section id="contact-section" className="w-full px-6 py-12 bg-gray-100 [scroll-margin-top:6rem]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-        {/* Left Side Form */}
+        {/* Left Side Form (Same as Before) */}
         <div className="bg-white shadow-lg rounded-lg p-8">
           <h2 className="text-2xl font-bold mb-2">Have Any Query?</h2>
           <p className="text-gray-700 mb-6">
@@ -25,33 +25,20 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Right Side Info */}
-        <div className="flex flex-col justify-between space-y-4 md:space-y-0 h-full">
-
-          {/* Get in Touch */}
-          <div className="bg-white shadow-lg rounded-lg p-6 flex-1">
-            <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-            <div className="flex items-center mb-2"><FaMapMarkerAlt className="mr-3 text-blue-700" /><span>Gopalpura Flyover, Jaipur – 302018</span></div>
-            <div className="flex items-center mb-2"><FaPhoneAlt className="mr-3 text-blue-700" /><span>0141-2551500</span></div>
-            <div className="flex items-center mb-2"><FaPhoneAlt className="mr-3 text-blue-700" /><span>0141-2554139</span></div>
-            <div className="flex items-center mb-2"><FaPhoneAlt className="mr-3 text-blue-700" /><span>+91-7414-001-001</span></div>
-            <div className="flex items-center mb-2"><FaEnvelope className="mr-3 text-blue-700" /><span>jaipur.hospital@gmail.com</span></div>
+        {/* Right Side: Get in Touch Only */}
+        <div className="flex flex-col justify-center h-full">
+          <div className="bg-white shadow-lg rounded-lg p-8 h-full flex flex-col justify-center">
+            <h2 className="text-3xl font-bold mb-6 text-blue-900">Get in Touch</h2>
+            <div className="flex flex-col space-y-4 text-lg">
+              <div className="flex items-center"><FaMapMarkerAlt className="mr-3 text-blue-700" /><span>Gopalpura Flyover, Jaipur – 302018</span></div>
+              <div className="flex items-center"><FaPhoneAlt className="mr-3 text-blue-700" /><span>0141-2551500</span></div>
+              <div className="flex items-center"><FaPhoneAlt className="mr-3 text-blue-700" /><span>0141-2554139</span></div>
+              <div className="flex items-center"><FaPhoneAlt className="mr-3 text-blue-700" /><span>+91-7414-001-001</span></div>
+              <div className="flex items-center"><FaEnvelope className="mr-3 text-blue-700" /><span>jaipur.hospital@gmail.com</span></div>
+            </div>
           </div>
-
-          {/* Our Specialities */}
-          <div className="bg-white shadow-lg rounded-lg p-6 flex-1">
-            <h2 className="text-2xl font-bold mb-4">Our Specialities</h2>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
-              <li>Internal Medicine</li>
-              <li>Gynaecology</li>
-              <li>Neurosurgery</li>
-              <li>Plastic Surgery</li>
-              <li>Urology</li>
-              <li>ENT</li>
-            </ul>
-          </div>
-
         </div>
+
       </div>
 
       {/* Map Section */}
@@ -64,7 +51,6 @@ const Contact = () => {
           loading="lazy"
         ></iframe>
       </div>
-
     </section>
   );
 };

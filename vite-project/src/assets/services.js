@@ -1,5 +1,5 @@
 import vaccine from "../assets/images/vaccine.jpg";
-// import selfcare from "../assets/images/self-care.jpg";
+//import selfcare from "../assets/images/self-care.jpg";
 import laboratory from "../assets/images/lab.png";
 import treatment from "../assets/images/treatment.jpg";
 import pethealth from "../assets/images/pet.avif";

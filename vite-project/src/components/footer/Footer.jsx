@@ -49,6 +49,19 @@ const Footer = () => {
                     </ul>
                 </div>
 
+                {/* Our Specialities Section */}
+                <div>
+                    <ul className="flex flex-col gap-3">
+                        <li className="uppercase font-bold text-[16px]">Our Specialities</li>
+                        <li className="text-[14px] font-light cursor-pointer">Internal Medicine</li>
+                        <li className="text-[14px] font-light cursor-pointer">Gynaecology</li>
+                        <li className="text-[14px] font-light cursor-pointer">Neurosurgery</li>
+                        <li className="text-[14px] font-light cursor-pointer">Plastic Surgery</li>
+                        <li className="text-[14px] font-light cursor-pointer">Urology</li>
+                        <li className="text-[14px] font-light cursor-pointer">ENT</li>
+                    </ul>
+                </div>
+
                 {/* Social Media */}
                 <div>
                     <ul className="flex flex-col gap-3">
@@ -63,9 +76,9 @@ const Footer = () => {
                 <div>
                     <ul className="flex flex-col gap-3">
                         <li className="uppercase font-bold text-[16px]">Contact</li>
-                        <li className="text-[14px] font-light cursor-pointer">Austin Texas, 4567 Road Palm</li>
-                        <li className="text-[14px] font-light cursor-pointer">+00 123 456 789</li>
-                        <li className="text-[14px] font-light cursor-pointer">medi@test.com</li>
+                        <li className="text-[14px] font-light cursor-pointer">Mahaveer Nagar S16A, S17, Tonk Rd, Gopal Pura Mode,<br /> Jaipur, Rajasthan 302018</li>
+                        <li className="text-[14px] font-light cursor-pointer">+0141-2551500</li>
+                        <li className="text-[14px] font-light cursor-pointer">jaipur.hospital@gmail.com</li>
                     </ul>
                 </div>
             </div>
