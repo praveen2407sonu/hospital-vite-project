@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
-import logo from "../../assets/images/hospital-plus.webp";
+import logo from "../../assets/images/amar-logo.png";
 import TopBar from "../topbar/TopBar";
 
 const Navbar = () => {
@@ -32,11 +32,11 @@ const Navbar = () => {
       </div>
 
       {/* NAVBAR */}
-      <div className="fixed top-[64px] sm:top-10 left-0 w-full bg-white shadow-sm border-b border-gray-200 z-40">
+      <div className="fixed top-[64px] sm:top-10 left-0 w-full bg-white shadow-sm border-b border-gray-200 z-40 py-4 sm:py-4">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-2 flex items-center justify-between">
           {/* LOGO */}
           <Link to="/">
-            <img src={logo} alt="logo" className="w-24 cursor-pointer" />
+            <img src={logo} alt="logo" className="w-32 sm:w-36 cursor-pointer" />
           </Link>
 
           {/* DESKTOP MENU */}

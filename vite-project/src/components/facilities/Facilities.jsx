@@ -28,7 +28,7 @@ const Facilities = () => {
             Here’s how these facilities help improve patient outcomes.
           </p>
 
-          <button className="mt-4 px-6 py-3 bg-[#174EB2] text-white text-[15px] rounded-lg w-fit mx-auto lg:mx-0 hover:bg-[#0f3c8e] transition">
+          <button className="mt-4 px-6 py-4 bg-[#34476c]  hover:bg-[#0F3D94] text-white text-[15px] rounded-lg w-fit mx-auto lg:mx-0 hover:bg-[#0f3c8e] transition">
             Find Out More
           </button>
         </div>

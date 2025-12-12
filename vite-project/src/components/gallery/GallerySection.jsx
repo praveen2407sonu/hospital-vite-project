@@ -28,13 +28,13 @@ export default function GallerySection() {
   return (
     <section id="gallery-section" className="w-full py-12 bg-gray-50">
       
-      {/* Heading */}
-      <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center sm:text-left">
+      {/* Heading and Button Container */}
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col items-center gap-6 mb-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center">
           Gallery of Hospital
         </h2>
 
-        <button className="px-5 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-red-600 transition w-auto sm:w-40">
+        <button className="px-5 py-4 shadow hover:bg-[#0F3D94] bg-[#34476c] text-white rounded-md transition w-auto sm:w-40">
           View Gallery
         </button>
       </div>
