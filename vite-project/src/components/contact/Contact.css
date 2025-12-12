@@ -1,0 +1,58 @@
+/* Custom styles for Contact component */
+
+/* Responsive adjustments for form and contact info cards */
+@media (max-width: 1024px) {
+  #contact-section > div {
+    flex-direction: column;
+  }
+}
+
+/* Ensure text doesn't overflow on small screens */
+.break-all {
+  word-break: break-word;
+}
+
+/* Smooth transitions for all interactive elements */
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  #contact-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Improve touch targets on mobile */
+  input, textarea, button {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  button {
+    min-height: 44px; /* Better touch target */
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  #contact-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .grid-cols-1.sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Improve focus states for accessibility */
+input:focus, textarea:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Loading optimization for map */
+iframe {
+  background-color: #f5f5f5;
+}
