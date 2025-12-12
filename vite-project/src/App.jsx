@@ -22,6 +22,7 @@ import AboutHospital from "./pages/AboutHospital";
 import BlogsPage from "./pages/BlogsPage";
 import ContactPage from "./pages/ContactPage";
 import OurServicesPage from "./pages/OurServicesPage";
+import NewsMediaPage from "./pages/NewsMediaPage";
 
 function App() {
   return (
@@ -60,8 +61,10 @@ function App() {
 
         {/* NEW CONTACT PAGE */}
         <Route path="/contact" element={<ContactPage />} />
-        
+
         <Route path="/our-services" element={<OurServicesPage />} />
+
+          <Route path="/news-media" element={<NewsMediaPage />} />
 
       </Routes>
 

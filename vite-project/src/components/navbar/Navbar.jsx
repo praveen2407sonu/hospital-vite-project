@@ -110,8 +110,10 @@ const Navbar = () => {
 
             {/* NEWS & MEDIA */}
             <Link
-              to="/#gallery"
-              className={`hover:text-[#14A44D] transition ${defaultClass}`}
+              to="/news-media"
+              className={`hover:text-[#14A44D] transition ${
+                location.pathname === "/news-media" ? activeClass : defaultClass
+              }`}
             >
               News & Media
             </Link>
