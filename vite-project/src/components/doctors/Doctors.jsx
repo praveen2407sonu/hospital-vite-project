@@ -7,7 +7,7 @@ import doctors from "../../assets/doctors";
 
 const Doctors = () => {
   return (
-    <div className="relative text-center px-5 py-14 mb-10 overflow-hidden">
+    <div className="relative text-center px-5 py-14  overflow-hidden">
 
       {/* Background Spheres */}
       <div className="absolute left-10 top-5 w-40 h-40 bg-blue-200 rounded-full opacity-40 blur-2xl -z-10"></div>

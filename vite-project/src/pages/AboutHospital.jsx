@@ -7,7 +7,7 @@ import aboutImg3 from "../assets/images/Dr.-Seema-Goyal.jpeg";
 
 const AboutHospital = () => {
   return (
-    <div className="pt-[110px] pb-20 bg-gray-50 about-section">
+    <div className="pt-[50px] pb-20 bg-gray-50 about-section">
 
       {/* HERO HEADER */}
       <div className="bg-green-400 text-white py-16 flex flex-col items-center text-center px-6">

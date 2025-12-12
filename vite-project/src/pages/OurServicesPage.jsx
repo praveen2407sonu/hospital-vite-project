@@ -47,7 +47,7 @@ const HoverImageBox = ({ image, title, description }) => {
 
 const OurServicesPage = () => {
   return (
-    <div className="pt-28 pb-16 bg-gray-50">
+    <div className="pt-[50px] pb-16 bg-gray-50">
       
       {/* HEADER BANNER */}
       <div className="relative w-full h-64 bg-cover bg-center bg-blue-600">

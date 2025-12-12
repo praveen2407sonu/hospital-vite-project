@@ -5,8 +5,8 @@ import img1 from "../../assets/images/gallery1.jpg";
 import img2 from "../../assets/images/gallery2.jpg";
 import img3 from "../../assets/images/gallery3.webp";
 import img4 from "../../assets/images/gallery4.jpg";
-import img5 from "../../assets/images/gallery3.webp";
-import img6 from "../../assets/images/gallery2.jpg";
+import img5 from "../../assets/images/gallery6.webp";
+import img6 from "../../assets/images/gallery5.jpg";
 import img7 from "../../assets/images/gallery4.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6, img7];
@@ -47,7 +47,15 @@ export default function GallerySection() {
           className="flex transition-transform duration-700 ease-in-out"
           style={{
             width: `${images.length * 100}%`,
-            transform: `translateX(-${current * (100 / 3)}%)`,
+            transform: `translateX(-${
+              current *
+              (100 /
+                (window.innerWidth < 640
+                  ? 1      // Mobile: 1 image
+                  : window.innerWidth < 1024
+                  ? 2      // Tablet: 2 images
+                  : 3))    // Desktop: 3 images
+            }%)`,
           }}
         >
           {images.map((img, index) => (
