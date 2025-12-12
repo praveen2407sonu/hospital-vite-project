@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FiChevronDown, FiSearch } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 import logo from "../../assets/images/hospital-plus.webp";
 import TopBar from "../topbar/TopBar";
 
@@ -46,6 +46,7 @@ const Navbar = () => {
                 <span>About Us</span>
                 <FiChevronDown className="mt-[2px] w-5 h-5 text-gray-800" />
               </div>
+
               <div className="absolute left-0 top-7 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 bg-white shadow-lg border border-gray-200 rounded w-48 py-2 z-50">
                 {[
                   { name: "About Hospital", link: "/about-hospital" },
@@ -71,10 +72,39 @@ const Navbar = () => {
                 <span>Services</span>
                 <FiChevronDown className="mt-[2px] w-5 h-5 text-gray-800" />
               </div>
+
               <div className="absolute left-0 top-7 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 bg-white shadow-lg border border-gray-200 rounded w-52 py-2 z-50">
-                {["Emergency Services","Ambulance Service","24/7 Pharmacy","Diagnostic Services","Health Checkups","Surgery","ENT","Cardiology","Pediatrics","Radiology"].map((item,i)=>(
-                  <p key={i} className="px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#14A44D] cursor-pointer">{item}</p>
-                ))}
+
+                {[
+                  "Our Service",
+                  "Emergency Services",
+                  "Ambulance Service",
+                  "24/7 Pharmacy",
+                  "Diagnostic Services",
+                  "Health Checkups",
+                  "Surgery",
+                  "ENT",
+                  "Cardiology",
+                  "Pediatrics",
+                  "Radiology"
+                ].map((item, i) =>
+                  item === "Our Service" ? (
+                    <Link
+                      key={i}
+                      to="/our-services"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#14A44D]"
+                    >
+                      {item}
+                    </Link>
+                  ) : (
+                    <p
+                      key={i}
+                      className="px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#14A44D] cursor-pointer"
+                    >
+                      {item}
+                    </p>
+                  )
+                )}
               </div>
             </div>
 
@@ -96,7 +126,7 @@ const Navbar = () => {
               Blogs
             </Link>
 
-            {/* CONTACT → NEW PAGE */}
+            {/* CONTACT */}
             <Link
               to="/contact"
               className={`hover:text-[#14A44D] transition ${
@@ -106,12 +136,11 @@ const Navbar = () => {
               Contact Us
             </Link>
 
-            <FiSearch className="text-gray-700 w-5 h-5 cursor-pointer hover:text-[#14A44D] transition" />
           </div>
         </div>
       </div>
 
-      {/* Padding */}
+      {/* PAGE SPACING */}
       <div className="pt-24"></div>
     </>
   );

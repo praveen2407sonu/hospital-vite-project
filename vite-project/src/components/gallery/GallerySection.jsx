@@ -14,9 +14,12 @@ const images = [img1, img2, img3, img4, img5, img6, img7];
 export default function GallerySection() {
   const [current, setCurrent] = useState(0);
 
+  // Auto Slide
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      setCurrent((prev) =>
+        prev === images.length - 1 ? 0 : prev + 1
+      );
     }, 2500);
 
     return () => clearInterval(interval);
@@ -25,34 +28,42 @@ export default function GallerySection() {
   return (
     <section id="gallery-section" className="w-full py-12 bg-gray-50">
       
-      {/* Heading Row */}
-      <div className="max-w-5xl mx-auto px-4  lg:px-8 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+      {/* Heading */}
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center sm:text-left">
           Gallery of Hospital
         </h2>
 
-        <button className="px-5 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-red-600 transition w-auto   sm:w-40 sm:ml-4  ">
+        <button className="px-5 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-red-600 transition w-auto sm:w-40">
           View Gallery
         </button>
       </div>
 
-      {/* Slider */}
-      <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow">
+      {/* Slider Container */}
+      <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
+        
+        {/* Inner Slider */}
         <div
-          className="flex transition-transform duration-700"
-          style={{ transform: `translateX(-${current * 100}%)` }}
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{
+            width: `${images.length * 100}%`,
+            transform: `translateX(-${current * (100 / 3)}%)`,
+          }}
         >
           {images.map((img, index) => (
-            <img
+            <div
               key={index}
-              src={img}
-              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover flex-shrink-0"
-              alt="hospital"
-            />
+              className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 p-2"
+            >
+              <img
+                src={img}
+                alt="gallery"
+                className="w-full h-64 sm:h-72 md:h-80 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           ))}
         </div>
       </div>
-
     </section>
   );
 }

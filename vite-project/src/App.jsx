@@ -21,6 +21,7 @@ import FAQSection from './Faq/FaqSection';
 import AboutHospital from "./pages/AboutHospital";
 import BlogsPage from "./pages/BlogsPage";
 import ContactPage from "./pages/ContactPage";
+import OurServicesPage from "./pages/OurServicesPage";
 
 function App() {
   return (
@@ -59,6 +60,8 @@ function App() {
 
         {/* NEW CONTACT PAGE */}
         <Route path="/contact" element={<ContactPage />} />
+        
+        <Route path="/our-services" element={<OurServicesPage />} />
 
       </Routes>
 
