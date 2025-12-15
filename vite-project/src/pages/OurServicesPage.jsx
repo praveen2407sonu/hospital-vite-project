@@ -10,12 +10,10 @@ import {
 import advancedCareImg from "../assets/images/advance-care.webp";
 import diagnosticImg from "../assets/images/daignostic.jpg";
 
-
-//  HOVER IMAGE BOX 
+// HOVER IMAGE BOX (Responsive Slide)
 const HoverImageBox = ({ image, title, description }) => {
   return (
     <div className="relative group w-full h-[350px] overflow-hidden rounded-xl shadow-lg">
-
       {/* IMAGE */}
       <img
         src={image}
@@ -27,13 +25,17 @@ const HoverImageBox = ({ image, title, description }) => {
       <div
         className="
           absolute inset-0 bg-black/60 text-white p-6 flex flex-col justify-center
-          -translate-x-full group-hover:translate-x-0
+          -translate-x-full sm:-translate-x-full md:-translate-x-full lg:-translate-x-full
+          group-hover:translate-x-0
           transition-all duration-500 ease-in-out
+          sm:group-hover:translate-x-0
+          md:group-hover:translate-x-0
+          lg:group-hover:translate-x-0
+          xs:-translate-y-full xs:group-hover:translate-y-0
         "
       >
         <h3 className="text-2xl font-bold mb-2">{title}</h3>
         <p className="text-gray-200 mb-4">{description}</p>
-
         <button className="text-[#14A44D] font-semibold mt-2">
           Learn More →
         </button>
@@ -41,9 +43,6 @@ const HoverImageBox = ({ image, title, description }) => {
     </div>
   );
 };
-
-
-
 
 const OurServicesPage = () => {
   return (
@@ -58,8 +57,6 @@ const OurServicesPage = () => {
         </div>
       </div>
 
-
-
       {/* SERVICE INTRO */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-12">
         <p className="text-black text-2xl leading-relaxed mb-10">
@@ -68,10 +65,8 @@ const OurServicesPage = () => {
           patient.
         </p>
 
-
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
             <FiAlertTriangle className="w-12 h-12 text-[#14A44D] mb-4" />
             <h3 className="text-xl font-semibold mb-2">24/7 Emergency Care</h3>
@@ -107,34 +102,21 @@ const OurServicesPage = () => {
             <h3 className="text-xl font-semibold mb-2">Surgery & Operations</h3>
             <p className="text-gray-600">Expert surgeons with modern OT.</p>
           </div>
-
         </div>
       </div>
 
-
-
-
-
-
-      {/* --------------------- */}
       {/* SECTION 1 */}
-      {/* --------------------- */}      
-
       <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        {/* IMAGE WITH HOVER EFFECT */}
         <HoverImageBox
           image={advancedCareImg}
           title="Advanced Patient Care"
           description="Our ICUs & trauma units are equipped with advanced monitoring systems."
         />
 
-        {/* TEXT */}
         <div>
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
             Advanced Patient Care Facilities
           </h2>
-
           <p className="text-gray-600 mb-6">
             Our hospital is equipped with modern ICUs, trauma units, 
             and high-tech monitoring systems to ensure the best patient care.
@@ -157,22 +139,12 @@ const OurServicesPage = () => {
         </div>
       </div>
 
-
-
-
-
-      {/* --------------------- */}
       {/* SECTION 2 */}
-      {/* --------------------- */}
-
       <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-        {/* TEXT */}
         <div>
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
             Cutting-Edge Diagnostic Technology
           </h2>
-
           <p className="text-gray-600 mb-6">
             We use world-class imaging systems, digital labs, and 
             AI-powered diagnostic tools to provide accurate results.
@@ -183,12 +155,10 @@ const OurServicesPage = () => {
               <FiActivity className="text-[#14A44D] w-6 h-6" />
               <span className="text-gray-700">MRI, CT Scan & Digital X-Ray</span>
             </li>
-
             <li className="flex items-center gap-3">
               <FiActivity className="text-[#14A44D] w-6 h-6" />
               <span className="text-gray-700">Fully Automated Laboratory</span>
             </li>
-
             <li className="flex items-center gap-3">
               <FiActivity className="text-[#14A44D] w-6 h-6" />
               <span className="text-gray-700">AI Assisted Diagnosis</span>
@@ -196,18 +166,12 @@ const OurServicesPage = () => {
           </ul>
         </div>
 
-        {/* IMAGE WITH HOVER EFFECT */}
         <HoverImageBox
           image={diagnosticImg}
           title="Modern Diagnostic Technology"
           description="MRI, CT scan, digital X-ray and automated labs powered by AI."
         />
-
       </div>
-
-
-
-
     </div>
   );
 };
