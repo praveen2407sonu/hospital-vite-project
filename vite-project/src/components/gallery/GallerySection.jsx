@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Importing images
 import img1 from "../../assets/images/gallery1.jpg";
@@ -34,9 +35,18 @@ export default function GallerySection() {
           Gallery of Hospital
         </h2>
 
-        <button className="px-5 py-4 shadow hover:bg-[#0F3D94] bg-[#34476c] text-white rounded-md transition w-auto sm:w-40">
+        {/* <button className="px-5 py-4 shadow hover:bg-[#0F3D94] bg-[#34476c] text-white rounded-md transition w-auto sm:w-40">
           View Gallery
-        </button>
+        </button> */}
+
+      <Link to="/gallery">
+  <button className="px-5 py-4 shadow hover:bg-[#0F3D94] bg-[#34476c] text-white rounded-md transition w-auto sm:w-40">
+    View Gallery
+  </button>
+</Link>
+
+
+
       </div>
 
       {/* Slider Container */}

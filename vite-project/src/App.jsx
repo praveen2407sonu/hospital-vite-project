@@ -1,5 +1,6 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Banner from './components/banner/Banner';
 import Doctors from './components/doctors/Doctors';
@@ -23,12 +24,14 @@ import BlogsPage from "./pages/BlogsPage";
 import ContactPage from "./pages/ContactPage";
 import OurServicesPage from "./pages/OurServicesPage";
 import NewsMediaPage from "./pages/NewsMediaPage";
+import GalleryPage from "./pages/GalleryPage";
+
 
 function App() {
   return (
     <>
       <Navbar />
-
+       <ScrollToTop />
       <Routes>
 
         {/* HOME PAGE */}
@@ -65,6 +68,8 @@ function App() {
         <Route path="/our-services" element={<OurServicesPage />} />
 
           <Route path="/news-media" element={<NewsMediaPage />} />
+         
+         <Route path="/gallery" element={<GalleryPage />} />
 
       </Routes>
 
