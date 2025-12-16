@@ -4,7 +4,7 @@ import img1 from "../assets/images/gallery1.jpg";
 import img2 from "../assets/images/gallery2.jpg";
 import img3 from "../assets/images/gallery3.webp";
 import img4 from "../assets/images/gallery4.jpg";
-import img5 from "../assets/images/gallery5.jpg"; // Extra images
+import img5 from "../assets/images/gallery5.jpg"; 
 import img6 from "../assets/images/gallery6.webp";
 
 const newsItems = [
@@ -79,7 +79,7 @@ const NewsMediaPage = () => {
                     {item.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <button className="flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                  <button className="flex items-center text-blue-600 font-medium hoveafyr:text-blue-800 transition">
                     Read More <FiChevronRight className="ml-1 w-5 h-5" />
                   </button>
                 </div>
@@ -91,18 +91,18 @@ const NewsMediaPage = () => {
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">
             Media Highlights
           </h2>
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 ">
             {mediaHighlights.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row hover:shadow-2xl transition duration-300"
+                className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row hover:shadow-2xl transition duration-300 h-full"
               >
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full lg:w-1/2 h-64 lg:h-auto object-cover"
                 />
-                <div className="p-6 lg:p-10 flex flex-col justify-center">
+                <div className="p-6 lg:p-10 flex flex-col justify-center h-full">
                   <h3 className="text-2xl font-semibold mb-3 text-gray-800">
                     {item.title}
                   </h3>

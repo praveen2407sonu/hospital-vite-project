@@ -21,32 +21,32 @@ const HeaderSlider = () => {
     {
       image: slider1,
       title: "Advanced Healthcare for Everyone",
-      description: "We provide world-class medical care with a compassionate approach."
+      description: "We provide world-class medical care with a compassionate approach.",
     },
     {
       image: slider2,
       title: "Your Health, Our Commitment",
-      description: "Our team of experts is dedicated to your well-being."
+      description: "Our team of experts is dedicated to your well-being.",
     },
     {
       image: slider3,
       title: "Trusted Specialists at Your Service",
-      description: "We ensure the highest standard of care for all patients."
+      description: "We ensure the highest standard of care for all patients.",
     },
     {
       image: slider4,
       title: "Comprehensive Medical Solutions",
-      description: "From diagnostics to treatment, we cover all your healthcare needs."
+      description: "From diagnostics to treatment, we cover all your healthcare needs.",
     },
     {
       image: slider5,
       title: "Patient-Centered Care Always",
-      description: "We prioritize your comfort and safety in every step."
+      description: "We prioritize your comfort and safety in every step.",
     },
     {
       image: slider6,
       title: "Innovative Healthcare Facilities",
-      description: "Modern equipment and skilled staff for best treatment outcomes."
+      description: "Modern equipment and skilled staff for best treatment outcomes.",
     },
   ];
 
@@ -120,17 +120,10 @@ const HeaderSlider = () => {
 
             <form className="grid grid-cols-1 gap-4">
 
-              {/* FIRST NAME */}
+              {/* FULL NAME */}
               <input
                 type="text"
-                placeholder="First Name"
-                className="border p-2 rounded-md w-full"
-              />
-
-              {/* LAST NAME */}
-              <input
-                type="text"
-                placeholder="Last Name"
+                placeholder="Full Name"
                 className="border p-2 rounded-md w-full"
               />
 
@@ -147,6 +140,23 @@ const HeaderSlider = () => {
                 placeholder="Phone Number"
                 className="border p-2 rounded-md w-full"
               />
+
+              {/* APPOINTMENT DATE */}
+              <input
+                type="date"
+                className="border p-2 rounded-md w-full"
+              />
+
+              {/* SELECT DOCTOR */}
+              <select className="border p-2 rounded-md w-full">
+                <option>Select Doctor</option>
+                <option>Dr. Amit Sharma (Cardiologist)</option>
+                <option>Dr. Neha Verma (Neurologist)</option>
+                <option>Dr. Rajesh Kumar (Orthopedic)</option>
+                <option>Dr. Pooja Singh (Pediatrician)</option>
+                <option>Dr. Anil Mehta (General Surgeon)</option>
+                <option>Dr. Kavita Rao (ENT Specialist)</option>
+              </select>
 
               {/* SELECT DEPARTMENT */}
               <select className="border p-2 rounded-md w-full">
@@ -188,7 +198,6 @@ const HeaderSlider = () => {
           </div>
         </div>
       )}
-
     </div>
   );
 };

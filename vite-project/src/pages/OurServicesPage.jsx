@@ -138,7 +138,7 @@ const OurServicesPage = () => {
           </ul>
         </div>
       </div>
-
+ 
       {/* SECTION 2 */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
